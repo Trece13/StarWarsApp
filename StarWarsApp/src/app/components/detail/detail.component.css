@@ -8,3 +8,11 @@
 #movieDescription{
     font-size: 11px;
 }
+
+#movieProducers{
+    font-size: 14px;
+}
+
+.notBorder{
+    border: none !important;
+}

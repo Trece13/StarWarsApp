@@ -1,7 +1,7 @@
-<div class="m-5">
+<div class="m-5 animated fadeIn">
     <div class="row mb-10 d-flex justify-content-center">
         <div class="col-md-8 d-flex justify-content-center">
-          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative notBorder">
             <div class="col-auto d-none d-lg-block">
                 <img class="bd-placeholder-img" src = "https://vignette.wikia.nocookie.net/es.starwars/images/c/c4/EADSPosterFinal.jpg/revision/latest?cb=20200212005458" width="300" height="450" />
             </div>
@@ -10,6 +10,10 @@
               <h3 class="mb-0">{{myMovie.title}}</h3>
               <div class="mb-1 text-muted">{{myMovie.release_date}}</div>
               <p id = "movieDescription"  class="card-text mb-auto">{{myMovie.opening_crawl}}</p>
+              <div class="container" id = "movieProducers">
+                  <p><strong>Director:</strong> {{myMovie.director}}</p>
+                  <p><strong>Produced by:</strong> {{myMovie.producer}}</p>
+              </div>
             </div>
             <div class="container">
                 <h4>Planets</h4>
