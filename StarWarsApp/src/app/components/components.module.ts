@@ -5,6 +5,8 @@ import { DetailComponent } from './detail/detail.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { SearchComponent } from './search/search.component';
 import { FooterComponent } from './footer/footer.component';
+import { PipesModule } from '../pipes/pipes.module';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -24,7 +26,9 @@ import { FooterComponent } from './footer/footer.component';
     FooterComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    PipesModule,
+    RouterModule 
   ]
 })
 export class ComponentsModule { }

@@ -6,6 +6,7 @@ import { NavbarComponent } from '../components/navbar/navbar.component';
 import { SearchComponent } from '../components/search/search.component';
 import { ComponentsModule } from '../components/components.module';
 import { MovieComponent } from './movie/movie.component';
+import { PipesModule } from '../pipes/pipes.module';
 
 
 

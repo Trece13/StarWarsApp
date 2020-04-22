@@ -1,0 +1,10 @@
+.lineList{
+    list-style: none;
+    display: inline-block;
+}
+.lineList li {
+	display: inline;
+}
+#movieDescription{
+    font-size: 11px;
+}

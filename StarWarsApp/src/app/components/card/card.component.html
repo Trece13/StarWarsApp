@@ -1,8 +1,14 @@
-<div class="card m-5" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+<div class="row row-cols-1 row-cols-md-3">
+    <div class="card mt-3 mr-0,5" *ngFor="let item of dataList; let i = index">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Star_Wars_Logo.svg/694px-Star_Wars_Logo.svg.png" class="card-img-top" [alt]="item.title">
+        <div class="card-body">
+        
+        <h3 class="card-title">{{item.title}}</h3>
+        <h6 class="card-title textEpisode">Episode {{item.episode_id}}</h6>
+        
+        <p class="card-text">{{ item.opening_crawl | shortDescription:120 }}</p>
+        <a [routerLink]="['/movie/',i+1]"  class="btn btn-sm btn-outline-info">View More...</a>
+        <p class="card-text textEpisode dateFont">{{item.release_date}}</p>
+        </div>
     </div>
-  </div>
+</div>
