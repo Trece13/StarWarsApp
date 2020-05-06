@@ -6,9 +6,7 @@
         </a>
       
         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-          <a class="dropdown-item" href="#">1980</a>
-          <a class="dropdown-item" href="#">1981</a>
-          <a class="dropdown-item" href="#">1982</a>
+          <a class="dropdown-item" (click)="sendYear(item.release_date)" *ngFor="let item of starWarsService.moviesList " #dropYear>{{item.release_date | date:'yyyy'}}</a>
         </div>
       </div>
 </div>

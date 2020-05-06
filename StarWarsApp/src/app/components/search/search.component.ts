@@ -8,15 +8,22 @@ import { StarWarsServiceService } from 'src/app/services/star-wars-service.servi
 })
 export class SearchComponent implements OnInit {
 
+  yearsList:any[];
   constructor(public starWarsService:StarWarsServiceService) { }
 
   searchMovieByName( txMovieName: string ){
-    console.log( txMovieName );
+    //console.log( txMovieName );
     this.starWarsService.getStarWarsMoviesByName(txMovieName)
-                        .subscribe( data => this.starWarsService.moviesList = data);
+                        .subscribe( data => {
+                          this.starWarsService.moviesList = data;
+                        });
   }
 
   ngOnInit() {
+  }
+
+  sendYear( year:string ){
+    this.starWarsService.moviesList = this.starWarsService.moviesList.filter(data => data.release_date === year)
   }
 
 }
