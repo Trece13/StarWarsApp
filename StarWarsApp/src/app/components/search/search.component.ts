@@ -23,7 +23,7 @@ export class SearchComponent implements OnInit {
   }
 
   sendYear( year:string ){
-    this.starWarsService.moviesList = this.starWarsService.moviesList.filter(data => data.release_date === year)
+    this.starWarsService.moviesList = this.starWarsService.moviesList.filter(data => data.release_date === year);
   }
 
 }
